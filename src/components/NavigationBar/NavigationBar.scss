@@ -1,0 +1,17 @@
+
+@import '../../styles/global.scss';
+
+.nav-bar-c {
+    background-color: $primary-color !important;
+    color: $white-color !important;
+
+    .nav-bar-menu {
+        flex-direction: row-reverse !important;
+    }
+
+    .MuiButtonBase-root:hover {
+        text-decoration: underline;
+        font-weight: 600;
+    }
+}
+

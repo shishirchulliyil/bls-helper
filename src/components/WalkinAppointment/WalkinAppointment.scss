@@ -1,0 +1,26 @@
+@import '../../styles/global.scss';
+
+.walkin-c {
+  width: 40rem;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  .walkin-date-picker {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    .MuiPickersLayout-root {
+      .MuiPickersLayout-actionBar {
+        display: none;
+      }
+    }
+  }
+}

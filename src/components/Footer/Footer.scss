@@ -1,0 +1,29 @@
+@import '../../styles/global.scss';
+
+.footer-c {
+    background-color: $grey-color;
+    color: $black-color-medium;
+    padding: 2rem 5rem;
+    margin-top: auto;
+    height: 5rem;
+    font-weight: 100;
+    font-size: 12px;
+    text-align: center;
+
+    .footer-content {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            gap: 1rem;
+
+            p {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
