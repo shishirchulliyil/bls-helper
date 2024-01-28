@@ -1,35 +1,35 @@
-import * as React from 'react';
+// import * as React from 'react';
 import './NavigationBar.scss';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
+// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
+// import Menu from '@mui/material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+// import Button from '@mui/material/Button';
+// import MenuItem from '@mui/material/MenuItem';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 
-const pages = [
-  'Surrender Certificate',
-  'Overseas Citizenship',
-  'Walkin Token Generator',
-];
+// const pages = [
+//   'Surrender Certificate',
+//   'Overseas Citizenship',
+//   'Walkin Token Generator',
+// ];
 
 const NavigationBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null,
-  );
+  // const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+  //   null,
+  // );
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
+  // const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  //   setAnchorElNav(event.currentTarget);
+  // };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  // const handleCloseNavMenu = () => {
+  //   setAnchorElNav(null);
+  // };
 
   return (
     <AppBar className="nav-bar-c" position="static">
@@ -56,7 +56,7 @@ const NavigationBar = () => {
             VHelper
           </Typography>
 
-          <Box
+          {/* <Box
             sx={{
               flexGrow: 1,
               display: { xs: 'flex', md: 'none' },
@@ -96,7 +96,7 @@ const NavigationBar = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
           <AccessibilityNewIcon
             sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
           />
@@ -118,7 +118,7 @@ const NavigationBar = () => {
           >
             VHelper
           </Typography>
-          <Box
+          {/* <Box
             sx={{
               flexGrow: 1,
               display: { xs: 'none', md: 'flex' },
@@ -134,7 +134,7 @@ const NavigationBar = () => {
                 {page}
               </Button>
             ))}
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

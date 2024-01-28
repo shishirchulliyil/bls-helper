@@ -3,7 +3,7 @@ import { Chip } from '@mui/material';
 import { useHome } from './useHome';
 
 const Home = () => {
-  const { handleClickSOIC, handleClickOCI, handleClickWalkin, t } = useHome();
+  const { handleClickSOIC, handleClickWalkin, t } = useHome();
 
   return (
     <div className="home-c">
@@ -13,11 +13,11 @@ const Home = () => {
           label={t('home.soic')}
           onClick={handleClickSOIC}
         />
-        <Chip
+        {/* <Chip
           className="home-c-links--link"
           label={t('home.oci')}
           onClick={handleClickOCI}
-        />
+        /> */}
         <Chip
           className="home-c-links--link"
           label={t('home.walkin')}
