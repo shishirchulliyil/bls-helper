@@ -32,6 +32,7 @@ const TimeSlots = ({ walkin }: Props) => {
                 key={index}
                 timeSlot={timeSlot}
                 index={index}
+                bookingTimeSlot={bookingTimeSlot}
                 setBookingTimeSlot={setBookingTimeSlot}
               />
             ))}

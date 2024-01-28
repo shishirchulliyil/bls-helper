@@ -1,4 +1,3 @@
-import Paper from '@mui/material/Paper';
 import {
   RootState,
   TimeSlotT,
@@ -9,6 +8,8 @@ import {
 import { useSelector } from 'react-redux';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
+import './GeneratedToken.scss';
+import { Paper } from '@mui/material';
 
 type Props = {
   bookingTimeSlot: string;
@@ -48,12 +49,21 @@ const GeneratedToken = ({ bookingTimeSlot, date, user }: Props) => {
   }
 
   return (
-    <Paper className="showToken-token">
-      <p>{bookingTimeSlot}</p>
-      <p>{userToken.id}</p>
-      <p>{userToken?.user.name}</p>
-      <p>{userToken?.user.phone}</p>
-      <p>{userToken?.user.email}</p>
+    <Paper className="showToken-token" elevation={14}>
+      <div className="showToken-token--left">
+        <p className="showToken-token--time">
+          Your slot has been booked for {bookingTimeSlot}!
+        </p>
+        <p className="showToken-token--data">Name: {userToken?.user.name}</p>
+        <p className="showToken-token--data">
+          Contact: {userToken?.user.phone}
+        </p>
+        <p className="showToken-token--data">Email: {userToken?.user.email}</p>
+        <p className="showToken-token--id">{userToken.id}</p>
+      </div>
+      <div className="showToken-token--right">
+        <p className="showToken-token--time">{bookingTimeSlot}</p>
+      </div>
     </Paper>
   );
 };
