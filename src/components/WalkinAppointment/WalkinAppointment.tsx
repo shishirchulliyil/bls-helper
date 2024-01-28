@@ -1,31 +1,32 @@
-import {
-  StaticDatePicker,
-  LocalizationProvider,
-  // TimePicker,
-} from '@mui/x-date-pickers';
+import { useEffect, useState } from 'react';
+import { StaticDatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import './WalkinAppointment.scss';
 import { Button } from '@mui/material';
-import { useEffect, useReducer, useState } from 'react';
 import dayjs from 'dayjs';
-import { walkinReducer } from '../../reducers/walkinReducer';
-import {
-  DefaultWalkinActions,
-  DefaultWalkinAppointment,
-} from '../../defaults/WalkinDefault';
 import TimeSlots from '../TimeSlots/TimeSlots';
+import { useDispatch, useSelector } from 'react-redux';
+import './WalkinAppointment.scss';
+import { getAllTokensForDate } from '../../redux/walkinSlice';
+import { RootState, WalkinAppointmentT } from '../../types/WalkinTypes';
 
 const WalkinAppointment = () => {
   const [dateValue, setDateValue] = useState<dayjs.Dayjs>(dayjs());
   const [showTimeSlots, setShowTimeSlots] = useState(false);
-  // useEffect(() => {
-  //   console.log('dateValue >', dayjs(dateValue).format('DD-MM-YYYY'));
-  // }, [dateValue]);
 
-  const [state, dipatch] = useReducer(walkinReducer, DefaultWalkinAppointment);
+  const walkinData = useSelector((state: RootState) => state.walkin);
+  const dispatch = useDispatch();
   const handleCheckAppoitment = () => {
-    dipatch({ type: DefaultWalkinActions.GetAllTokens });
+    dispatch(getAllTokensForDate(dayjs(dateValue).format('DD-MM-YYYY')));
     setShowTimeSlots(true);
+  };
+
+  const getWalkinForDate = () => {
+    const walkinForDate = walkinData.find(
+      (walkin: WalkinAppointmentT) =>
+        walkin.date === dayjs(dateValue).format('DD-MM-YYYY'),
+    );
+    if (!walkinForDate) return undefined;
+    return walkinForDate;
   };
 
   useEffect(() => {
@@ -43,15 +44,10 @@ const WalkinAppointment = () => {
             onChange={(newValue) => setDateValue(dayjs(newValue))}
           />
         </div>
-        {/* <div className="walkin-date-picker">
-          <p>Check available time slots for above date.</p>
-          <TimePicker timeSteps={{ hours: 1, minutes: 15 }} />
-        </div> */}
-
         <Button variant="contained" onClick={handleCheckAppoitment}>
           Check Appoitment
         </Button>
-        {showTimeSlots ? <TimeSlots timeSlots={state.timeSlots} /> : null}
+        {showTimeSlots ? <TimeSlots walkin={getWalkinForDate()} /> : null}
       </div>
     </LocalizationProvider>
   );

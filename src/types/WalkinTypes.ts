@@ -1,8 +1,7 @@
 import dayjs from 'dayjs';
 
-export type WalkinActionTypeT = {
-  type: string;
-  payload?: unknown;
+export type RootState = {
+  walkin: WalkinAppointmentT[];
 };
 
 export type WalkinAppointmentT = {
@@ -13,19 +12,26 @@ export type WalkinAppointmentT = {
 export type TimeSlotT = {
   time: string;
   availableTokens: number;
+  error?: number;
+  errorMessage?: string;
   tokens: TokenT[];
 };
 
 export type TokenT = {
-  id: string;
-  alloted: boolean;
+  id?: string;
+  alloted?: boolean;
   user: UserT;
 };
 
 export type UserT = {
   name: string;
   email: string;
-  contact: number;
+  phone: string;
+};
+
+export type GenerateTokenActionType = {
+  type: 'SET_NAME' | 'SET_PHONE' | 'SET_EMAIL';
+  payload: string;
 };
 
 // Example below for the object 🚀🚀

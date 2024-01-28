@@ -10,11 +10,15 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import './i18n';
+import { Provider } from 'react-redux';
+import store from './redux/store.ts';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
 );

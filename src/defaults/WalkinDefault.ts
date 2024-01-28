@@ -4,102 +4,102 @@ export const DefaultWalkinAppointment: WalkinAppointmentT = {
   date: '',
   timeSlots: [
     {
-      time: '08:00',
+      time: '08:00 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '08:15',
+      time: '08:15 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '08:30',
+      time: '08:30 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '08:45',
+      time: '08:45 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '09:00',
+      time: '09:00 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '09:15',
+      time: '09:15 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '09:30',
+      time: '09:30 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '09:45',
+      time: '09:45 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '10:00',
+      time: '10:00 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '10:15',
+      time: '10:15 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '10:30',
+      time: '10:30 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '10:45',
+      time: '10:45 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '11:00',
+      time: '11:00 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '11:15',
+      time: '11:15 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '11:30',
+      time: '11:30 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '11:45',
+      time: '11:45 AM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '12:00',
+      time: '12:00 PM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '12:15',
+      time: '12:15 PM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '12:30',
+      time: '12:30 PM',
       availableTokens: 5,
       tokens: [],
     },
     {
-      time: '12:45',
+      time: '12:45 PM',
       availableTokens: 5,
       tokens: [],
     },
@@ -107,7 +107,7 @@ export const DefaultWalkinAppointment: WalkinAppointmentT = {
 };
 
 export const DefaultWalkinActions = {
-  GetAllTokens: 'getAllTokens',
+  GetAllTokensForDate: 'getAllTokensForDate',
   GenerateToken: 'generateToken',
   DeleteToken: 'deleteToken',
 };

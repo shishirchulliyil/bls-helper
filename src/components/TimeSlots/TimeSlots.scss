@@ -1,0 +1,18 @@
+@import '../../styles/global.scss';
+
+.timeSlots-c {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: $black-color-medium;
+
+  .timeSlots-slots {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
