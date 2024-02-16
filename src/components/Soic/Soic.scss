@@ -1,0 +1,64 @@
+@import '../../styles/global.scss';
+
+
+.soic-c {
+    margin: 0 auto;
+    max-width: 90rem;
+    min-width: 90rem;
+    padding: 10rem;
+
+    .soic-c-title {
+        font-size: 2rem;
+        margin: 2rem;
+        text-align: center;
+        color: $black-color-medium;
+    }
+
+    .soic-c-step {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem;
+
+        .soic-c-step-img {
+            width: 60rem;
+        }
+    }
+
+    .MuiStepIcon-root {
+        color: $primary-color;
+    }
+
+    .MuiStepIcon-root.Mui-active {
+        color: $primary-color-medium;
+    }
+
+    .MuiStepIcon-root.Mui-completed {
+        color: $primary-color-light;
+    }
+    
+    .MuiStepLabel-label {
+        color: $black-color-light
+    }
+
+    .MuiStepLabel-label.Mui-active {
+        color: $black-color
+    }
+
+    .MuiButton-root {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+
+    .MuiButton-root:hover {
+        background-color: $primary-color-light;
+        color: $white-color;
+    }
+
+    .MuiButton-root.Mui-disabled {
+        background-color: $black-color-light;
+        color: $grey-color;
+    }
+
+}

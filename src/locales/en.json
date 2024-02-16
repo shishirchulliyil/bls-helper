@@ -1,0 +1,16 @@
+{
+    "home": {
+        "soic": "Visa Form Helper - Surrender Of India Citizenship",
+        "oci": "Visa Form Helper - Overseas Citizenship Of India (OCI)",
+        "walkin": "Walkin Token Generator"
+    },
+    "soic": {
+        "step1": "Passport Details",
+        "step2": "Applicant Details",
+        "step3": "Family Details",
+        "step4": "Present Residential Address",
+        "step5": "Emergency Contact",
+        "step6": "Surrender Certificate Details Verification",
+        "step7": "Surrender Certificate Application Summary"
+    }
+}

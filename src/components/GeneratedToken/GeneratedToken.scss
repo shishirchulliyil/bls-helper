@@ -1,0 +1,52 @@
+@import '../../styles/global.scss';
+
+.showToken-token {
+  width: 35rem;
+  background-color: $secondary-color-50 !important;
+  border-radius: 0.3rem;
+  border: 1px solid $grey-color;
+  display: flex;
+  margin-top: 3rem;
+
+  .showToken-token--left {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 0.5rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    .showToken-token--time {
+      font-size: 20px;
+      font-weight: 500;
+      margin-right: auto;
+      margin-bottom: 2rem;
+    }
+
+    .showToken-token--id {
+      font-size: 8px;
+      font-weight: 500;
+      margin-top: 2rem;
+    }
+
+    .showToken-token--data {
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: auto;
+    }
+  }
+
+  .showToken-token--right {
+    border-left: 2px dotted #ababab;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .showToken-token--time {
+      transform: rotate(90deg);
+      font-size: 25px;
+      font-weight: 500;
+    }
+  }
+}

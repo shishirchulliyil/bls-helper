@@ -1,0 +1,45 @@
+@import '../../styles/global.scss';
+
+.walkin-c {
+  width: 80rem;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  min-height: 85vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  .walkin-date-picker {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: $black-color-medium;
+
+    .MuiPickersLayout-root {
+      .MuiPickersLayout-actionBar {
+        display: none;
+      }
+
+      .MuiPickersDay-root:hover {
+        background-color: $teal-color-100;
+      }
+
+      .MuiPickersDay-root.Mui-selected {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  .MuiButton-root {
+    background-color: $primary-color;
+  }
+
+  .MuiButton-root:hover {
+    background-color: $primary-color-medium;
+  }
+}
